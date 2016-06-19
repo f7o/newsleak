@@ -27,11 +27,12 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0" excludeAll(
   ExclusionRule(organization = "com.danieltrinh")))
 
 libraryDependencies += "org.scalariform" %% "scalariform" % "0.1.7"
+libraryDependencies += "commons-codec" % "commons-codec" % "1.10" force()
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-scalariform" % "1.3.0")
 
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.0.4")
 addSbtPlugin("org.scoverage" % "sbt-coveralls" % "1.0.3")
-
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 
 

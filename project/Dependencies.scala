@@ -48,7 +48,9 @@ object Dependencies {
     val scalikejdbcConfig = "org.scalikejdbc" %% "scalikejdbc-config" % "2.3.5" // ApacheV2
 
     val elasticsearch = "org.elasticsearch" % "elasticsearch" % "2.2.0" // ApacheV2
-    val elastic4s = "com.sksamuel.elastic4s" %% "elastic4s-core" % "2.2.0" // ApacheV2
+    val elastic4s = "com.sksamuel.elastic4s" %% "elastic4s-core" % "2.3.0" // ApacheV2
+
+    val codec = "commons-codec" % "commons-codec" % "1.10" force()
 
     object Test {
       val scalikejdbc = "org.scalikejdbc" %% "scalikejdbc-test" % "2.3.+" % "test" // ApacheV2
@@ -66,6 +68,6 @@ object Dependencies {
     ner, scalaNlp, h2database, Test.scalikejdbc, Test.scalatest, Test.scalamock)
 
   val commonDeps = l ++= Seq(playJson, scalaNlp, elastic4s, elasticsearch,
-    postgresql, scalikejdbc, scalikejdbcConfig, h2database, logging, slf4jSimple,
+    postgresql, scalikejdbc, scalikejdbcConfig, h2database, logging, slf4jSimple,codec,
     Test.scalikejdbc, Test.scalatest, Test.scalamock)
 }
